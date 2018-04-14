@@ -19,5 +19,5 @@ def facts():
     return render_template('facts.html', title = t, imageLink = i, explanation = e)
 
 if __name__ == "__main__":
-	port = 5000
+	port = int(os.environ.get("PORT",5000))
 	app.run(host="0.0.0.0", port=port, threaded=True)
